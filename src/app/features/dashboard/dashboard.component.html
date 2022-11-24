@@ -1,0 +1,51 @@
+brand: 'BMW', model: '5.0', km: '100', year: '2018', shift: 'automatic', fuel:
+'benzin', color: 'black', car_type: 'sedan', e_car: false
+<div class="container">
+  <div class="header">
+    <a routerLink="/car-registration">
+      <button>
+          Add car 
+      </button>
+    </a>
+  </div>
+  <div class="body">
+    <h2>title here</h2>
+    <div class="content">
+      <!-- <div class="col-lg-12" style="display: flex; justify-content: center;"> -->
+      <div class="col-lg-12">
+        <li class="card" *ngFor="let car of cars">
+            <div class="card-header">
+              <h2>{{ car.brand }}</h2>
+              <h2>{{ car.model }}</h2>
+            </div>
+            <div class="card-body">
+              <p>
+                Km: <span>{{ car.km }}</span>
+              </p>
+              <p>
+                Year: <span>{{ car.year }}</span>
+              </p>
+              <p>
+                Shift: <span>{{ car.shift }}</span>
+              </p>
+              <p>
+                Fuel: <span>{{ car.fuel }}</span>
+              </p>
+              <p>
+                Color: <span>{{ car.color }}</span>
+              </p>
+              <p>
+                Type: <span>{{ car.car_type }}</span>
+              </p>
+              <p>
+                E-car: <span>{{ car.e_car === true ? "Yes" : "No" }}</span>
+              </p>
+            </div>
+            <div class="card-footer"></div>
+        </li>
+      </div>
+
+      <!-- <car-card [car]="car"> -->
+    </div>
+  </div>
+</div>
